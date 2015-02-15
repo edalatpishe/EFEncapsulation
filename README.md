@@ -50,7 +50,7 @@ Both 'PrivateProperty' and 'HasManyPrivate' methods have overloads to specify th
 ```
 this.PrivateProperty(a => a.CreateDateTime,NamingConventions.UnderscoreCamelCase);
 ```
-Passing "null" or not passing any value to the class cause the library to use the default naming convention.
+Passing "null" or not passing any value to the method cause the library to use the default naming convention.
 
 ## Naming Conventions
 Entity Framework Encapsulation uses naming conventions to find the name of the private properties and map them. There are currently 5 naming conventions. CamelCase (which is the default one), UnderscoreCamelCase, UnderscoreCase, Lowercase and Uppercase. See the following table for examples :
