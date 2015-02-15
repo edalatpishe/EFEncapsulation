@@ -10,8 +10,7 @@ namespace EntityFramework.Encapsulation.Sample.Domain.Model
     {
         #region Fields
         private DateTime _createDateTime { get; set; }
-        //private string _customerName { get; set; }
-        private string _customerName;
+        private string _customerName { get; set; }
         private List<OrderItem> _orderItems { get; set; } 
         #endregion
 
@@ -19,7 +18,7 @@ namespace EntityFramework.Encapsulation.Sample.Domain.Model
         public long Id { get; private set; }
         public DateTime CreateDateTime { get { return _createDateTime; } }
         public string CustomerName { get { return _customerName; } }
-        public ICollection<OrderItem> OrderItems { get { return _orderItems; } }
+        public ICollection<OrderItem> OrderItems { get { return _orderItems.AsReadOnly(); } }
 
         public decimal TotalPrice
         {
