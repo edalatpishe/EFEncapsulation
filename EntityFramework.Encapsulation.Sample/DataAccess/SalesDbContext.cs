@@ -24,7 +24,7 @@ namespace EntityFramework.Encapsulation.Sample.DataAccess
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            EntityFramework.Encapsulation.Defaults.DefaultNamingConvention = NamingConventions.UnderscoreCamelCase;
+            Defaults.DefaultNamingConvention = NamingConventions.UnderscoreCamelCase;
 
             modelBuilder.Configurations.Add(new OrderMapping());
             modelBuilder.Configurations.Add(new OrderItemMapping());
